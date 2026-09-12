@@ -1,0 +1,27 @@
+.portfolio-hero {
+    background: linear-gradient(135deg, #714B67 0%, #017E84 100%);
+    color: #ffffff;
+}
+
+.portfolio-hero h1 {
+    font-weight: 700;
+    font-size: 2.8rem;
+}
+
+.portfolio-badge {
+    display: inline-block;
+    margin: 4px;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    background-color: #f1f1f1;
+    color: #333;
+    border-radius: 20px;
+}
+
+.portfolio-project h2 {
+    font-weight: 600;
+}
+
+.portfolio-contact {
+    background-color: #f8f9fa;
+}

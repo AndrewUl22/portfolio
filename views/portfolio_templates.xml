@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="portfolio_page_template" name="Portfolio Page">
+        <t t-call="website.layout">
+            <div id="wrap" class="portfolio-page">
+
+                <!-- Hero section -->
+                <section class="portfolio-hero">
+                    <div class="container text-center py-5">
+                        <h1 t-esc="name"/>
+                        <p class="lead" t-esc="tagline"/>
+                        <a t-att-href="github_url" target="_blank"
+                           class="btn btn-primary btn-lg mt-3">
+                            Смотреть код на GitHub
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Skills section -->
+                <section class="portfolio-skills py-4">
+                    <div class="container text-center">
+                        <span t-foreach="skills" t-as="skill"
+                              class="badge portfolio-badge"
+                              t-esc="skill"/>
+                    </div>
+                </section>
+
+                <!-- Project showcase -->
+                <section class="portfolio-project py-5">
+                    <div class="container">
+                        <h2 class="text-center mb-4">Проект: Library</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Что это</h4>
+                                <p>
+                                    Учебный модуль Odoo для управления библиотекой:
+                                    учёт книг, читателей и истории выдач.
+                                    Написан с нуля для изучения фреймворка Odoo
+                                    перед устройством на позицию Back-end Developer.
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Что внутри</h4>
+                                <ul>
+                                    <li>Три связанные модели: book / member / loan</li>
+                                    <li>Computed-поля (доступность книги)</li>
+                                    <li>Права доступа через ir.model.access.csv</li>
+                                    <li>Кастомные views: form, list, search</li>
+                                    <li>Constraint-валидация (нельзя выдать занятую книгу)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <em>Скриншоты интерфейса — добавь сюда после того,
+                                как наполнишь library демо-данными.</em>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact / footer -->
+                <section class="portfolio-contact py-5 text-center">
+                    <div class="container">
+                        <h3>Контакты</h3>
+                        <p>Email: your-email@example.com</p>
+                        <a t-att-href="github_url" target="_blank">GitHub</a>
+                    </div>
+                </section>
+
+            </div>
+        </t>
+    </template>
+
+</odoo>

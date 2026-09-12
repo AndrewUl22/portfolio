@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Odoo
+*.pot
+*.log
+
+# IDE / редакторы
+.vscode/
+.idea/
+*.swp
+
+# OS-мусор
+.DS_Store
+Thumbs.db
+
+# Виртуальное окружение (если буду создавать)
+venv/
+env/
