@@ -7,15 +7,16 @@ __pycache__/
 *.pot
 *.log
 
-# IDE / редакторы
+# IDE / editors
 .vscode/
 .idea/
 *.swp
 
-# OS-мусор
+# OS junk
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Виртуальное окружение (если буду создавать)
+# Virtual environment (if created)
 venv/
 env/

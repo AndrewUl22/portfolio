@@ -7,11 +7,11 @@ class PortfolioController(http.Controller):
 
     @http.route('/portfolio', type='http', auth='public', website=True, sitemap=True)
     def portfolio_page(self, **kwargs):
-        """Публичная страница портфолио, доступная без логина."""
+        """Public portfolio page, accessible without login."""
         values = {
             'name': 'Andrew',
-            'tagline': 'Начинающий Odoo-разработчик',
-            'github_url': 'https://github.com/YOUR_USERNAME/library',  # TODO: замени на свою ссылку
+            'tagline': 'Aspiring Odoo Developer',
+            'github_url': 'https://github.com/AndrewUl22/library',  # TODO: replace with your link
             'skills': [
                 'Python', 'Odoo ORM', 'PostgreSQL',
                 'XML Views', 'JavaScript', 'Owl Framework',

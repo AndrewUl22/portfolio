@@ -1,13 +1,13 @@
 {
     'name': 'Portfolio',
     'version': '1.0',
-    'summary': 'Публичная страница-портфолио на технологиях Odoo (Website + QWeb)',
+    'summary': 'Public portfolio page built on Odoo technology (Website + QWeb)',
     'description': """
-Учебный модуль: страница портфолио, встроенная в Odoo Website.
-Витрина проекта library (модели, репозиторий) + информация о себе.
+Training module: a portfolio page embedded in Odoo Website.
+Showcases the library project (models, repository) + basic info about me.
 """,
     'category': 'Website',
-    'author': 'Your Name',
+    'author': 'Andrew',
     'depends': ['website'],
     'data': [
         'views/portfolio_templates.xml',
