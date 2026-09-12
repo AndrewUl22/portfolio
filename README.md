@@ -1,35 +1,21 @@
-# Portfolio — страница-портфолио на Odoo Website
+Portfolio — Odoo Website Portfolio Page
 
-Публичная страница по адресу `/portfolio`, встроенная в Odoo через
-Website-модуль и QWeb-шаблон. Демонстрирует твой проект `library`
-и базовую информацию о тебе.
+A public page at /portfolio, built into Odoo through the Website module and a QWeb template. It showcases my library project along with some basic info about me.
 
-## Как установить
-1. Скопируй папку `portfolio` в `addons/` (рядом с `library`):
-   ```bash
-   cp -r portfolio /путь/до/odoo/addons/
-   ```
-2. Установи модуль (нужен установленный модуль `website`, он есть
-   в стандартной поставке Odoo, ставить отдельно не нужно):
-   ```bash
-   ./odoo-bin -d mydb --addons-path=addons,odoo/addons -i portfolio --dev=all
-   ```
-3. Открой `http://localhost:8069/portfolio` — без логина, страница публичная.
-
-## Что доделать самому
-- В `controllers/main.py` замени плейсхолдеры (`name`, `github_url`, email
-  в шаблоне) на свои реальные данные
-- Сделай скриншоты интерфейса `library` (форма книги, список выдач)
-  и добавь их в `static/description/` или на внешний хостинг картинок,
-  вставь в шаблон через `<img t-att-src="..."/>`
-- Как только выложишь `library` на GitHub — обнови `github_url`
-- По желанию: добавь свою фотографию, ссылку на LinkedIn, короткое
-  "обо мне" — сейчас это заготовка, а не готовый текст
-
-## Идеи для усложнения (не обязательно, но красиво смотрится)
-- Замени статичный список `skills` на модель `ir.model` (если хочешь
-  потренировать динамические QWeb-шаблоны с данными из базы)
-- Добавь простую форму обратной связи через `type='http', methods=['POST']`
-- Сделай отдельную секцию с live-статистикой из `library`
-  (сколько книг, сколько выдач) — хороший повод попрактиковать
-  ORM-запросы (`self.env['library.book'].search_count([])`)
+Installation
+Copy the portfolio folder into addons/ (next to library):
+bash
+cp -r portfolio /path/to/odoo/addons/
+Install the module (requires the website module, which ships with Odoo by default — no separate installation needed):
+bash
+./odoo-bin -d mydb --addons-path=addons,odoo/addons -i portfolio --dev=all
+Open http://localhost:8069/portfolio — no login required, the page is public.
+TODO
+Replace placeholders in controllers/main.py (name, github_url, email in the template) with real data
+Add screenshots of the library interface (book form, loan list) to static/description/ or an external image host, and embed them in the template via <img t-att-src="...">
+Once library is published on GitHub, update github_url
+Optional: add a photo, LinkedIn link, short "about me" — currently a placeholder, not final copy
+Ideas for further improvement (optional, but a nice touch)
+Replace the static skills list with an ir.model-backed one (good practice for dynamic QWeb templates driven by database data)
+Add a simple contact form via type='http', methods=['POST']
+Add a live-stats section from library (number of books, number of loans) — a good excuse to practice ORM queries (self.env['library.book'].search_count([]))
