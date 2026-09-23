@@ -18,12 +18,20 @@ cp -r portfolio /path/to/odoo/addons/
 
 3. Open `http://localhost:8069/portfolio` — no login required, the page is public.
 
+## What's on the page
+
+- Hero section with name, tagline, and a link to GitHub
+- Skills badges
+- Project showcase: the [`library`](https://github.com/AndrewUl22/library) Odoo module
+- Other projects: TravelTrucks RoadNest, LearnLingo, VocabBuilder (live demo + GitHub links each)
+- Certification: GoIT Fullstack Developer course (872h)
+- Contact section: email, phone, GitHub, LinkedIn
+
 ## TODO
 
-- Replace placeholders in `controllers/main.py` (`name`, `github_url`, email in the template) with real data
 - Add screenshots of the `library` interface (book form, loan list) to `static/description/` or an external image host, and embed them in the template via `<img t-att-src="...">`
-- Once `library` is published on GitHub, update `github_url`
-- Optional: add a photo, LinkedIn link, short "about me" — currently a placeholder, not final copy
+- Optional: add a profile photo
+- Optional: add live-stats from `library`
 
 ## Ideas for further improvement (optional, but a nice touch)
 

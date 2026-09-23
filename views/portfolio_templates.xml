@@ -58,12 +58,54 @@
                     </div>
                 </section>
 
+                <!-- Other projects -->
+                <section class="portfolio-other-projects py-5">
+                    <div class="container">
+                        <h2 class="text-center mb-4">Other Projects</h2>
+                        <div class="row">
+                            <div t-foreach="other_projects" t-as="project" class="col-md-4 mb-4">
+                                <div class="project-card h-100 p-3">
+                                    <h4 t-esc="project['name']"/>
+                                    <p t-esc="project['description']"/>
+                                    <p class="text-muted small" t-esc="project['stack']"/>
+                                    <div class="mt-3">
+                                        <a t-att-href="project['demo_url']" target="_blank"
+                                           class="btn btn-sm btn-primary me-2">Live demo</a>
+                                        <a t-att-href="project['github_url']" target="_blank"
+                                           class="btn btn-sm btn-outline-secondary">GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Certificate section -->
+                <section class="portfolio-certificate py-5 text-center">
+                    <div class="container">
+                        <h2 class="mb-4">Certification</h2>
+                        <p class="lead mb-1">
+                            <t t-esc="certificate['title']"/> — <t t-esc="certificate['issuer']"/>
+                        </p>
+                        <p class="mb-1">
+                            Completed <t t-esc="certificate['date']"/> · <t t-esc="certificate['hours']"/> hours
+                            (HTML/CSS, JavaScript, React, Next.js, Node.js, Career Skills)
+                        </p>
+                        <p class="text-muted">Certificate ID: <t t-esc="certificate['unique_id']"/></p>
+                    </div>
+                </section>
+
                 <!-- Contact / footer -->
                 <section class="portfolio-contact py-5 text-center">
                     <div class="container">
                         <h3>Contact</h3>
-                        <p>Email: your-email@example.com</p>
-                        <a t-att-href="github_url" target="_blank">GitHub</a>
+                        <p>Email: <a t-att-href="'mailto:' + email" t-esc="email"/></p>
+                        <p>Phone: <t t-esc="phone"/></p>
+                        <p>
+                            <a t-att-href="github_url" target="_blank">GitHub</a>
+                            &#160;·&#160;
+                            <a t-att-href="linkedin_url" target="_blank">LinkedIn</a>
+                        </p>
                     </div>
                 </section>
 
