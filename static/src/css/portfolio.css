@@ -60,6 +60,11 @@
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
+.hero-note {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
 .portfolio-badge {
     display: inline-flex;
     align-items: center;

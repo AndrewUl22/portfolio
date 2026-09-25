@@ -7,7 +7,7 @@
 
                 <!-- Hero section -->
                 <section class="portfolio-hero">
-                    <div class="container text-center" style="padding-top:56px; padding-bottom:56px;">
+                    <div class="container text-center" style="padding-top:28px; padding-bottom:28px;">
                         <img class="portfolio-avatar mx-auto mb-3"
                              t-attf-src="/portfolio/static/src/img/avatar.png" alt="Andrii Ulianov"/>
                         <h1 style="margin-bottom:6px;" t-esc="name"/>
@@ -16,6 +16,7 @@
                            class="btn btn-lg hero-cta">
                             <i class="fa fa-github me-2"/>View code on GitHub
                         </a>
+                        <p class="hero-note mt-4">Attended Odoo Experience 2026</p>
                     </div>
                 </section>
 
